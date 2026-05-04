@@ -32,3 +32,6 @@ class ReviewDetailView(generics.RetrieveAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
 
+class ProductWithReviewsView(generics.ListAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
